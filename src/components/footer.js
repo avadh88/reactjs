@@ -6,7 +6,8 @@ class Footer extends React.Component{
 		this.state={name:"Avadh"};
 	}
 	render(){
-		setTimeout(()=>{this.setState({name:"Avadh Patel"})},2000)
+		setTimeout(()=>{this.setState({name:"Avadh Patel"})},4000)
+		setTimeout(()=>{this.setState({name:"Avadh"})},4000)
 		return(
 				<div>
 				{this.state.name}
