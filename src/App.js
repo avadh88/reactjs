@@ -7,12 +7,22 @@ import Footer from './components/footer';
 
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      title:"welcome",
+    }
+  }
+  changeTitle(title){
+    this.setState({title});
+  }
   render() {
     return (
+
       <div className="App">
         <Header />
-        <Layout/>
-        <Footer/>
+        <Layout title={this.state.title} changeTitle={this.changeTitle.bind(this)}/>
+        <Footer />
       </div>
     );
   }
